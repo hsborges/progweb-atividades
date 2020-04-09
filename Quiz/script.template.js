@@ -71,12 +71,53 @@ function processarResposta() {
   // TODO (implementar)
 }
 
-/*
- *  'fetch' é uma função que permite fazer a requisiçã de recursos web.
- *  Aqui usamos para obter as perguntas armazenadas no arquivo questoes.json
- *  Quando o arquivo for obtido, o javascript chama o método 'mostrarQuestao'
- */
-fetch('questoes.json')
-  .then((resposta) => resposta.json())
-  .then((json) => (questoes = json))
-  .then(() => mostrarQuestao());
+// pontuação atual do usuário
+var pontuacao = 0;
+// índice da pergunta atual. Lembrando que inicia em 0.
+var indiceQuestaoAtual = 0;
+// variável para armazenar as questões vindas do arquivo
+var questoes = [
+  {
+    pergunta: 'O que HTML significa?',
+    alternativas: [
+      'Home Tool Markup Language',
+      'Hyperlinks and Text Markup Language',
+      'Hyper Text Markup Language',
+      'Hyper Text Main Language',
+    ],
+    resposta: 2,
+  },
+  {
+    pergunta: 'O que CSS significa?',
+    alternativas: [
+      'Cascading Style Sheets',
+      'Computer Style Sheets',
+      'Colorful Style Sheets',
+      'Creative Style Sheets',
+    ],
+    resposta: 0,
+  },
+  {
+    pergunta: 'Quem está trabalhando nas especificações da web atualmente?',
+    alternativas: [
+      'Mozilla',
+      'O World Wide Web Consortium (WWWC)',
+      'Google',
+      'Microsoft',
+    ],
+    resposta: 1,
+  },
+  {
+    pergunta: 'Quais destas tags não possuem valor semântico?',
+    alternativas: ['<header>', '<em>', '<b>', '<strong>'],
+    resposta: 2,
+  },
+  {
+    pergunta: 'Não é um tipo válido em JS:',
+    alternativas: ['string', 'number', 'object', 'smallint'],
+    resposta: 3,
+  },
+];
+
+// Mostra a pergunta
+mostrarQuestao();
