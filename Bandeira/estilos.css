@@ -1,0 +1,32 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0px;
+}
+
+.bandeira-argentina {
+  width: 500px;
+  height: 250px;
+  border: 1px solid #75aadb;
+  margin-top: -5%;
+}
+
+.faixa-azul {
+  height: 35%;
+  width: 100%;
+  background-color: #75aadb;
+}
+
+.faixa-branca {
+  height: 30%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.faixa-branca img {
+  height: 85%;
+}
