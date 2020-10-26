@@ -1,4 +1,5 @@
 <?php
+error_reporting(E_ERROR | E_PARSE);
 
 /**
 * Cria uma instância do controlador para uso
@@ -22,5 +23,3 @@ switch ($_GET['acao']) {
     default:
         $controller->login();
 }
-
-?>
